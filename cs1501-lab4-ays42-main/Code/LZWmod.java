@@ -34,14 +34,14 @@ public class LZWmod {
         while (!BinaryStdIn.isEmpty()) {
             codeword = st.get(current);
             //TODO: read and append the next char to current
-            BinaryStdIn.readChar(codeword);
-            current.append(codeword);
+            char d = BinaryStdIn.readChar();
+            current.append(d);
             if(!st.contains(current)){
               BinaryStdOut.write(codeword, W);
               if (code < L)    // Add to symbol table if not full
                   st.put(current, code++);
               //TODO: reset current
-              current.setLength(0);
+              current = new StringBuilder();
             }
         }
 
