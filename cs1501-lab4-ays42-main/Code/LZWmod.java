@@ -48,7 +48,7 @@ public class LZWmod {
 
         //TODO: Write the codeword of whatever remains
         //in current
-        BinaryStdOut.write(st.get(current));
+        BinaryStdOut.write(st.get(current), W);
         BinaryStdOut.write(R, W); //Write EOF
         BinaryStdOut.close();
     }
